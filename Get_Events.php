@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
         $event['title'] = $result['title']; 
         $event['date'] = $result['date']; 
         $event['description'] = $result['description']; 
-        $events[] = $event;
+        array_push($events, $event);
     }
 } 
 $conn->close();
