@@ -1,4 +1,4 @@
-<php?
+<?php
 
 
 $host = "us-cdbr-azure-east-c.cloudapp.net";
