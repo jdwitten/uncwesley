@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 $host = "us-cdbr-azure-east-c.cloudapp.net";
 $user = "bddfe4567fcee0";
 $pwd = "aaa47743";
@@ -25,4 +25,11 @@ if ($result->num_rows > 0) {
 } 
 $conn->close();
 echo json_encode($events);
+
+*/
+echo "test";
+
+
+
+
 ?>
