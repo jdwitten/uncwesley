@@ -21,6 +21,7 @@ if ($result->num_rows > 0) {
         $event['title'] = $row['title']; 
         $event['date'] = $row['date']; 
         $event['description'] = $row['description']; 
+        $event['imageURL'] = $row['imageURL'];
         $events[] = $event;
     }
 } 
