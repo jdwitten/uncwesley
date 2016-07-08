@@ -12,14 +12,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT fname, lname, content, date FROM uncwesley.prayers JOIN uncwesley.users on senderID = userID";
+$query = "SELECT fname, lname, content, prayerDate FROM uncwesley.prayers JOIN uncwesley.users on senderID = userID";
 $result = $conn->query($query);
 $prayers = [];
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()){
         $prayer['name'] = $row['fname'] . $row['lname']; 
-        $prayer['date'] = $row['date']; 
+        $prayer['date'] = $row['prayerDate']; 
         $prayer['content'] = $row['content'];
         $prayer[] = $event;
     }
