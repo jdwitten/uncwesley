@@ -18,7 +18,7 @@ $prayers = [];
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()){
-        $prayer['name'] = $row['fname'] . $row['lname']; 
+        $prayer['name'] = $row['fname'] . " " . $row['lname']; 
         $prayer['date'] = $row['prayerDate']; 
         $prayer['content'] = $row['content'];
         $prayers[] = $prayer;
