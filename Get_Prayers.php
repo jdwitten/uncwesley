@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
         $prayer['name'] = $row['fname'] . $row['lname']; 
         $prayer['date'] = $row['prayerDate']; 
         $prayer['content'] = $row['content'];
-        $prayers[] = $event;
+        $prayers[] = $prayer;
     }
 } 
 $conn->close();
