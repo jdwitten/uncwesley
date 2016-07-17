@@ -1,11 +1,13 @@
 <php?
+
+      /*
       if(isset($_GET['fname']) && isset($_GET['lname']) && isset($_GET['class']) && isset($_GET['email']) && isset($_GET['major'])){
         
         $host = "us-cdbr-azure-east-c.cloudapp.net";
         $user = "bddfe4567fcee0";
         $pwd = "aaa47743";
         $db = "uncwesley";
-        
+      
       
         // Create connection
         $conn = new mysqli($host, $user, $pwd, $db);
@@ -19,6 +21,7 @@
     
         $result = $conn->query($query);
       }
+      */
       
       echo $_GET['fname'];
 ?>
