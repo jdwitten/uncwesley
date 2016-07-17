@@ -20,5 +20,5 @@
         $result = $conn->query($query);
       }
       
-      
+      echo $_GET['fname'];
 ?>
