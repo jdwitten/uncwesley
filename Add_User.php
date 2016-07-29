@@ -13,7 +13,7 @@
       $class = $_GET['class'];
       $major = $_GET['major'];
       
-      
+      var_dump($_GET);
         // Create connection
         $conn = new mysqli($host, $user, $pwd, $db);
         
