@@ -19,6 +19,9 @@
         $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES( $_GET['fname'] , $_GET['lname'] , $_GET['email'] , $_GET['class'] , $_GET['email'] )";
     
         $result = $conn->query($query);
+        
+        echo "test";
       }
+      else echo "failed";
       
 ?>
