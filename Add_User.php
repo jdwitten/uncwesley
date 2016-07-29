@@ -1,19 +1,19 @@
 <?php
 
-      if(isset($_GET['fname']) && isset($_GET['lname']) && isset($_GET['class']) && isset($_GET['email']) && isset($_GET['major'])){
+      if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['class']) && isset($_POST['email']) && isset($_POST['major'])){
         
         $host = "us-cdbr-azure-east-c.cloudapp.net";
         $user = "bddfe4567fcee0";
         $pwd = "aaa47743";
         $db = "uncwesley";
       
-      $fname = $_GET['fname'];
-      $lname = $_GET['lname'];
-      $email = $_GET['email'];
-      $class = $_GET['class'];
-      $major = $_GET['major'];
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $email = $_POST['email'];
+      $class = $_POST['class'];
+      $major = $_POST['major'];
       
-      var_dump($_GET);
+      var_dump($_POST);
         // Create connection
         $conn = new mysqli($host, $user, $pwd, $db);
         
