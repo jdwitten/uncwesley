@@ -1,5 +1,4 @@
 <php?
-
       /*
       if(isset($_GET['fname']) && isset($_GET['lname']) && isset($_GET['class']) && isset($_GET['email']) && isset($_GET['major'])){
         
@@ -17,11 +16,10 @@
         die("Connection failed: " . $conn->connect_error);
         }
         
-        $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES(" . $_GET['fname']. "," . $_GET['lname']. "," . $_GET['email']. "," . $_GET['class']. "," . $_GET['email']. ")";
+        $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES( $_GET['fname'] , $_GET['lname'] , $_GET['email'] , $_GET['class'] , $_GET['email'] )";
     
         $result = $conn->query($query);
       }
       */
-      
       echo $_GET['fname'];
 ?>
