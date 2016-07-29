@@ -7,6 +7,12 @@
         $pwd = "aaa47743";
         $db = "uncwesley";
       
+      $fname = $_GET['fname'];
+      $lname = $_GET['lname'];
+      $email = $_GET['email'];
+      $class = $_GET['class'];
+      $major = $_GET['major'];
+      
       
         // Create connection
         $conn = new mysqli($host, $user, $pwd, $db);
@@ -16,7 +22,7 @@
         die("Connection failed: " . $conn->connect_error);
         }
         
-        $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES( $_GET['fname'] , $_GET['lname'] , $_GET['email'] , $_GET['class'] , $_GET['email'] )";
+        $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES( $fname,$lname,$email,$class,$major )";
     
         $result = $conn->query($query);
         
