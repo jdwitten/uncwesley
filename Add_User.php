@@ -22,7 +22,7 @@
         die("Connection failed: " . $conn->connect_error);
         }
         
-        $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES( $fname,$lname,$email,$class,$major )";
+        $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES( '$fname','$lname','$email','$class','$major' )";
         var_dump($query);
         $result = $conn->query($query);
         
