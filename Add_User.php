@@ -1,33 +1,38 @@
 <?php
-
+      try{
       if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['class']) && isset($_POST['email']) && isset($_POST['major'])){
         
-        $host = "us-cdbr-azure-east-c.cloudapp.net";
-        $user = "bddfe4567fcee0";
-        $pwd = "aaa47743";
-        $db = "uncwesley";
-      
       $fname = $_POST['fname'];
       $lname = $_POST['lname'];
       $email = $_POST['email'];
       $class = $_POST['class'];
       $major = $_POST['major'];
       
-      var_dump($_POST);
-        // Create connection
-        $conn = new mysqli($host, $user, $pwd, $db);
-        
-        // Check connection
-        if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-        }
-        
-        $query = "INSERT INTO uncwesley.users (fname, lname, email, class, major) VALUES( '$fname','$lname','$email','$class','$major' )";
-        var_dump($query);
-        $result = $conn->query($query);
-        
-        echo "test";
+      $charset = 'utf8';
+      $host = "us-cdbr-azure-east-c.cloudapp.net";
+      $user = "bddfe4567fcee0";
+      $pass = "aaa47743";
+      $db = "uncwesley";
+      $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+      $opt = [
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES   => false,
+      ];
+      $pdo = new PDO($dsn, $user, $pass, $opt);
+      $query =   $pdo->prepare("SELECT COUNT(*) FROM uncwesley.users");
+      $query->execute();
+      $query->
+       
+      $query = $pdo->prepare("INSERT INTO uncwesley.users (userID, fname, lname, email, class, major) VALUES( ?,?,?,?,?,? )");
+      $query->execute([$userID, $fname, $lname, $email, $class, $major]); 
+      
+      $query = $pdo->prepare()
+      
       }
       else echo "failed";
-      
+      }
+      catch(Exception $e){
+            
+      }
 ?>
