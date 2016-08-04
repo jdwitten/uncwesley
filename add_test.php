@@ -14,7 +14,7 @@
 $pdo = new PDO($dsn, $user, $pass, $opt);
 $query =   $pdo->prepare("SELECT COUNT(*) FROM uncwesley.users");
 $query->execute();
-$arr = $query->fetch(PDO::FETCH_ASSOC);
+$arr = $query->fetch();
       
 var_dump($arr);
 
