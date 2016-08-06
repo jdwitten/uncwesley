@@ -14,9 +14,10 @@
                   PDO::ATTR_EMULATE_PREPARES   => false,
             ];
             $pdo = new PDO($dsn, $user, $pass, $opt);
-            $query =   $pdo->prepare("SELECT author, date, text, title FROM uncwesley.devotions");
-            $query->execute();
-            $arr = $query->fetch();
+            $query =   $pdo->query("SELECT author, date, text, title FROM uncwesley.devotions");
+            foreach($query as $row){
+             $arr[] = $row;
+            }
     
       }
       catch(Exception $e){
