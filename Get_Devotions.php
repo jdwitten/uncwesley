@@ -20,7 +20,7 @@
     
       }
       catch(Exception $e){
-            $result["success"] = false;
+            $arr = [];
       }
       
       echo json_encode($arr);
