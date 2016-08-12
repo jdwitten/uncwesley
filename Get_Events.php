@@ -23,6 +23,7 @@ if ($result->num_rows > 0) {
         $event['description'] = $row['description']; 
         $event['imageURL'] = $row['imageURL'];
         $event['location'] = $row['location'];
+        
         $events[] = $event;
     }
 } 
