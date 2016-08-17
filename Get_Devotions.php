@@ -14,7 +14,7 @@
                   PDO::ATTR_EMULATE_PREPARES   => false,
             ];
             $pdo = new PDO($dsn, $user, $pass, $opt);
-            $query =   $pdo->query("SELECT author, date, text, title FROM uncwesley.devotions");
+            $query =   $pdo->query("SELECT author, date, text, title FROM uncwesley.devotions ORDER BY date DESC");
             foreach($query as $row){
              $arr[] = $row;
             }
