@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT fname, lname, content, prayerDate FROM uncwesley.prayers JOIN uncwesley.users on senderID = userID ORDER BY prayerDate DESCENDING";
+$query = "SELECT fname, lname, content, prayerDate FROM uncwesley.prayers JOIN uncwesley.users on senderID = userID ORDER BY prayerDate ASCENDING";
 $result = $conn->query($query);
 $prayers = [];
 
