@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT fname, lname, content, prayerDate FROM uncwesley.prayers JOIN uncwesley.users on senderID = userID ORDER BY prayerDate DESC";
+$query = "SELECT fname, lname, content, prayerDate FROM uncwesley.prayers JOIN uncwesley.users on senderID = userID WHERE prayerDate > DATE_SUB(curdate(), INTERVAL 2 WEEK) ORDER BY prayerDate DESC";
 $result = $conn->query($query);
 $prayers = [];
 
