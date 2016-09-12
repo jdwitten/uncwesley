@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT * from uncwesley.events ORDER BY date ASC";
+$query = "SELECT * from uncwesley.events WHERE date > curdate() ORDER BY date ASC";
 $result = $conn->query($query);
 $events = [];
 
