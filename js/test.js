@@ -9,12 +9,7 @@ var Example = React.createClass({
             for(i=0; i<events.length;i++){
               eventNames.push(events[i]["name"])
             }
-            return (
-              <ul>
-              {eventNames}
-              </ul>
-
-            )
+            return <h1>Test</h1>
       }
   };
   xhttp.open("GET", "Get_Events.php", true);
