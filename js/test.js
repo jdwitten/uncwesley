@@ -1,17 +1,17 @@
+
 var Example = React.createClass({
   render: function(){
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
             var events = JSON.parse(this.resoponseText);
-            return (
-                <ul>
-                    {events.map(function(event){
-                        return <li>{event["name"]}</li>;
-                }
-                </ul>
-
-            )
+            console.log(events);
+            eventNames = []
+            for(i=0; i<events.length;i++){
+              eventNames.push(events[i]["name"])
+            }
+            return <h1>Test</h1>
+      }
   };
   xhttp.open("GET", "Get_Events.php", true);
   xhttp.send();
