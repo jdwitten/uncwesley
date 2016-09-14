@@ -14,10 +14,10 @@ var Example = React.createClass({
               </ul>
 
             )
+      }
   };
   xhttp.open("GET", "Get_Events.php", true);
   xhttp.send();
-  }
 })
 
 
