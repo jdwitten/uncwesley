@@ -5,13 +5,13 @@ var Example = React.createClass({
       if (this.readyState == 4 && this.status == 200) {
             var events = JSON.parse(this.resoponseText);
             eventNames = []
-            foreach(event in events){
-              eventNames.push(event["name"])
+            for(i=0; i<events.length;i++){
+              eventNames.push(events[i]["name"])
             }
             return (
               <ul>
               {eventNames}
-              </ul
+              </ul>
 
             )
   };
