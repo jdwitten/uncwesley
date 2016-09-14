@@ -6,6 +6,6 @@ var MyComponentClass = React.createClass({
 });
 
 ReactDOM.render(
-  <MyComponentClass />,
+  <h1>Hello, World!</h1>,
   document.getElementById('app')
 );
