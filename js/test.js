@@ -8,7 +8,7 @@ var Example = React.createClass({
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-            var prayers = JSON.parse(this.resoponseText);
+            var prayers = this.responseText
             system.log(events);
             prayerContent = []
             for(i=0; i<prayers.length;i++){
