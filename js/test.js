@@ -4,6 +4,7 @@ var Example = React.createClass({
       xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
             var events = JSON.parse(this.resoponseText);
+            system.log(events);
             eventNames = []
             for(i=0; i<events.length;i++){
               eventNames.push(events[i]["name"])
