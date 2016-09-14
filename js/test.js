@@ -1,23 +1,34 @@
 var Example = React.createClass({
-  render: function(){
+    getInitialState: function(){
+      return{
+          prayerData: ["Waiting for AJAX"]
+      }  
+    },
+  componentDidMount: function(){
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-            var events = JSON.parse(this.resoponseText);
+            var prayers = JSON.parse(this.resoponseText);
             system.log(events);
-            eventNames = []
-            for(i=0; i<events.length;i++){
-              eventNames.push(events[i]["name"])
+            prayerContent = []
+            for(i=0; i<prayers.length;i++){
+              prayerContent.push(prayers[i]["content"])
             }
-            return <h1>Test Succeeded</h1>
+            this.setState({
+                prayerData: prayerContent 
+            })
       }
-    else{
-        return <h1>Test Failed</h1>
-    }
   };
-  xhttp.open("GET", "Get_Events.php", true);
+  xhttp.open("GET", "Get_Prayers.php", true);
   xhttp.send();
-  }
+  return <h1>Waiting for AJAX</h1>
+  },
+    
+    render: function(){
+        return(
+            <ul>{this.state.prayerData}</ul>
+        )
+    }
     
     
 })
