@@ -18,6 +18,7 @@ var Example = React.createClass({
   };
   xhttp.open("GET", "Get_Events.php", true);
   xhttp.send();
+  }
 })
 
 
