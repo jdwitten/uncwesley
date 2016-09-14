@@ -4,12 +4,14 @@ var Example = React.createClass({
       xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
             var events = JSON.parse(this.resoponseText);
+            eventNames = []
+            foreach(event in events){
+              eventNames.push(event["name"])
+            }
             return (
-                <ul>
-                    {events.map(function(event){
-                        return <li>{event["name"]}</li>;
-                }
-                </ul>
+              <ul>
+              {eventNames}
+              </ul
 
             )
   };
