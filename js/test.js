@@ -7,11 +7,11 @@ var Example = React.createClass({
             return (
                 <ul>
                     {events.map(function(event){
-            return <li>{event["name"]}</li>;
+                        return <li>{event["name"]}</li>;
+                }
                 </ul>
 
             )
-    }
   };
   xhttp.open("GET", "Get_Events.php", true);
   xhttp.send();
