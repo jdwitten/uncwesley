@@ -9,7 +9,7 @@ var Example = React.createClass({
       xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
             var prayers = this.responseText
-            console.log(events);
+            console.log(prayers);
             prayerContent = []
             for(i=0; i<prayers.length;i++){
               prayerContent.push(prayers[i]["content"])
