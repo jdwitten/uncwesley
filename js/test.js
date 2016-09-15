@@ -12,7 +12,6 @@ var Example = React.createClass({
         this.setState({
             prayerData: response
         })
-         console.log(this.state.prayerData)
     },
     search: function(URL){
         $.ajax({
@@ -30,6 +29,7 @@ var Example = React.createClass({
         for(var i=0; i<this.state.prayerData.length; i++){
            content.push(this.state.prayerData[i]["content"]); 
         }
+        console.log(content)
         return(
             <ul>{content}</ul>
         )
