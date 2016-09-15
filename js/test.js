@@ -11,6 +11,7 @@ var Example = React.createClass({
             var prayers = this.responseText
             var prayerContent = []
             for(var i=0; i<prayers.length;i++){
+                console.log(prayers[i]["content"])
               prayerContent.push(prayers[i]["content"])
             }
             console.log(prayerContent)
