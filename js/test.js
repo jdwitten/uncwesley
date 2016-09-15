@@ -13,6 +13,7 @@ var Example = React.createClass({
         for(var i=0; i<response.length; i++){
             content.push(response[i]["content"])
         }
+            console.log(content)
             this.setState({
             prayerData: content
         })
