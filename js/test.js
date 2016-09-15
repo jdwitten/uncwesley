@@ -10,7 +10,7 @@ var Example = React.createClass({
     },
     showResults: function(response){
         this.setState({
-            prayerData: response.results
+            prayerData: response
         })
          console.log(this.state.prayerData)
     },
