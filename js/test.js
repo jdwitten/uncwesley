@@ -12,7 +12,7 @@ var Example = React.createClass({
         var content = [];
         console.log(response)
         for(var i=0; i<response.length; i++){
-            content.push(response[i]["content"])
+            content.push(response["content"])
         }
             console.log(content)
             this.setState({
