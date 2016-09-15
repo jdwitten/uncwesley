@@ -12,8 +12,7 @@ var Example = React.createClass({
         this.setState({
             prayerData: response.results
         })
-    }
-  },
+    },
     search: function(URL){
         $.ajax({
             type:"GET",
@@ -23,7 +22,7 @@ var Example = React.createClass({
                 this.showResults(response);
             }.bind(this)
         })
-    }
+    },
     
     render: function(){
         var content = []
