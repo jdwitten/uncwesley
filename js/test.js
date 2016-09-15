@@ -5,7 +5,7 @@ var Example = React.createClass({
     
     getInitialState: function(){
       return{
-          prayerData: [{content:"Waiting for AJAX"}]
+          prayerData: ["Waiting for Ajax"]
       }  
     },
     showResults: function(response){
