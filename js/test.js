@@ -15,7 +15,7 @@ var Example = React.createClass({
               prayerContent.push(prayers[i]["content"])
             }
             console.log(prayerContent)
-            this.setState({
+            setState({
                 prayerData: prayerContent 
             })
       }
