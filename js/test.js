@@ -10,7 +10,7 @@ var Example = React.createClass({
     },
     showResults: function(response){
         var content = [];
-        console.log(response)
+        console.log(response.length)
         for(var i=0; i<response.length; i++){
             content.push(response["content"])
         }
