@@ -9,8 +9,12 @@ var Example = React.createClass({
       }  
     },
     showResults: function(response){
-        this.setState({
-            prayerData: response
+        var content = [];
+        for(var i=0; i<response.length; i++){
+            content.push(response[i]["content"])
+        }
+            this.setState({
+            prayerData: content
         })
     },
     search: function(URL){
