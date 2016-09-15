@@ -11,6 +11,7 @@ var Example = React.createClass({
     showResults: function(response){
         this.setState({
             prayerData: response.results
+            console.log(this.state.prayerData)
         })
     },
     search: function(URL){
@@ -19,7 +20,6 @@ var Example = React.createClass({
             datatype:'jsonp',
             url:URL,
             success: function(response){
-                console.log(response)
                 this.showResults(response);
             }.bind(this)
         })
