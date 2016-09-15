@@ -19,6 +19,7 @@ var Example = React.createClass({
             datatype:'jsonp',
             url:URL,
             success: function(response){
+                console.log(response)
                 this.showResults(response);
             }.bind(this)
         })
