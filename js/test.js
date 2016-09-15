@@ -25,13 +25,8 @@ var Example = React.createClass({
     },
     
     render: function(){
-        var content = []
-        for(var i=0; i<this.state.prayerData.length; i++){
-           content.push(this.state.prayerData[i]["content"]); 
-        }
-        console.log(content)
         return(
-            <ul>{content}</ul>
+            <ul>{this.state.prayerData}</ul>
         )
     }
     
