@@ -11,8 +11,8 @@ var Example = React.createClass({
     showResults: function(response){
         this.setState({
             prayerData: response.results
-            console.log(this.state.prayerData)
         })
+         console.log(this.state.prayerData)
     },
     search: function(URL){
         $.ajax({
